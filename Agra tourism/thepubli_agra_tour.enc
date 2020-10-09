@@ -1,0 +1,184 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Jun 07, 2019 at 10:27 PM
+-- Server version: 5.6.44
+-- PHP Version: 7.2.7
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `thepubli_agra_tour`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `userid` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `userid`, `pass`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `domestic`
+--
+
+CREATE TABLE `domestic` (
+  `id` int(11) NOT NULL,
+  `heading` varchar(255) NOT NULL,
+  `location` varchar(222) NOT NULL,
+  `price` varchar(222) NOT NULL,
+  `duration` varchar(255) NOT NULL,
+  `details` text NOT NULL,
+  `image1` varchar(255) NOT NULL,
+  `image2` varchar(255) NOT NULL,
+  `overview` text NOT NULL,
+  `iti` text NOT NULL,
+  `info` text NOT NULL,
+  `terms` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `domestic`
+--
+
+INSERT INTO `domestic` (`id`, `heading`, `location`, `price`, `duration`, `details`, `image1`, `image2`, `overview`, `iti`, `info`, `terms`) VALUES
+(46, 'Taj Mahal', 'India', '2999', '3 Days  2 Night', '', 'taj.jpg', 'taj-mahal-1-facebook-cover-timeline-banner-for-fb.jpg', '<h3 style=\"text-align:justify;\">\r\n\"The city of Taj Mahal, the monument of eternal love\"\r\n</h3>\r\n<p>Home to one of the 7 wonders of the world, the Taj Mahal, Agra is a sneak peek into the architectural history with other structures such as Agra Fort and Fatehpur Sikri and hence makes for a must visit for anyone living in or visiting India.<br><br>\r\n\r\nWhen you talk about Agra, one thing has to stand out - yes, the Taj Mahal. Agra is host to the only one of the Seven Wonders of the World in India, Taj Mahal, which makes the whole country proud. But that\'s not the only thing Agra has to boast of. Agra has three UNESCO World Heritage sites and Taj Mahal features in the 50 most popular tourist destinations in the world. History, architecture, romance all together create the magic of Agra which is almost the lifeline of Indian tourism. History fanatics as well as architecture buffs can have a ball here with the sheer expanse of the Mughal art and culture on display. Apart from its monuments, the city also has some exciting stuff for foodies - including the famous Agra ka Petha and amazing chaat and Lassi.\r\n</p>', ' ', '', ''),
+(47, 'Fatehpur Sikri', 'Agra (India)', '1999', '', '', 'fateh.jpg', 'fatehpur-sikri-banner.jpg', '<h4>\"The Hometown of History\"</h4>\r\n<p>A city, predominantly made of red sandstone, Fatehpur Sikri was founded in 16th century by Mughal Emperor Akbar. It is essentially a fortified city built by the king and had been the capital of his Empire for fifteen years. Now a UNESCO world heritage site and a famous tourist attraction, it is a fine example of Mughal architecture. Fatehpur Sikri is home to Jodha Bai\'s palace, Jama Mosque, Buland Darwaza, and a Tomb of Salim Chisti among many other famous monuments, each of which, is an integral part of the Indian heritage.<br><br>\r\n\r\nA unique blend of architectural excellence, as well as religious beliefs - sums up Fatehpur Sikri. This monument was built by Akbar to honour Sheikh Salim Chisti, whose prediction of the birth of a Mughal heir came true while Akbar was visiting the then city of Sikri. In honour of the prophecy, Akbar built this city and Jama Masjid, a stunning mosque which is still in use today. He also undertook the construction of three palaces for each of his favourite wives, one a Hindu, one a Muslim and one a Christian. An Indo-Islamic Masterpiece, Fatehpur Sikri is enclosed by an 11 km long fortification wall which has various gateways. \r\nA paradise for History buffs, this place is a must visit! You can go on a one day trip from Agra to Fatehpur Sikri.</p>', ' ', '', ''),
+(48, 'Agra Fort', 'Agra | Uttar Pradesh | India', '1699', '', '', 'agra-fort-379666_1280-1024x682.jpg', 'agrafortbanner.jpg', '<h4>\"An Epitome of the Mughal Dynasty\"</h4>\r\n<p>An architectural masterpiece, The Red Fort of Agra or Agra Fort was built by Emperor Akbar in 1573. It is, in fact, a massive fortification located on the right bank of the River Yamuna in Agra, Uttar Pradesh and is made entirely of red sandstone. The fort was once the ersthwhile residence of the Mughals until the year 1638. One of the UNESCO World Heritage Sites and lies at a distance of 2.5 kilometres from another wonder of the modern world - The Famous Taj Mahal. The area of Agra Fort is so massive that it is often referred to as a walled city.  Made from red sandstone brought to Agra all the way from Rajasthan, this imposing structure is as majestic as it is beautiful and delicate. <br><br>\r\nAgra Fort is one of the most special monuments built by the Mughals and has richly decorated buildings. It is the perfect example of the Mughal style of art and architecture and is one of the most visited tourist spots in Agra. Built purely out of red sandstone, this expansive architecture stands out against the soft azure of the sky. Within the premises of the fort lie the most exquisite structures of the Mughals like the Pearl Mosque, Diwan-i I Khas, Diwan-i I Aam, Moti Masjid and Jahangiri Mahal. Each and every one of these edifices has remarkable handiwork and ornamentation that make this place a delight for every history and architecture lover. You can also get a splendid view of Taj Mahal from the Agra Fort!</p>', ' ', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `international`
+--
+
+CREATE TABLE `international` (
+  `id` int(11) NOT NULL,
+  `heading` varchar(255) NOT NULL,
+  `location` varchar(222) NOT NULL,
+  `price` varchar(222) NOT NULL,
+  `duration` varchar(255) NOT NULL,
+  `details` text NOT NULL,
+  `image1` varchar(255) NOT NULL,
+  `image2` varchar(255) NOT NULL,
+  `overview` text NOT NULL,
+  `iti` text NOT NULL,
+  `info` text NOT NULL,
+  `terms` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `international`
+--
+
+INSERT INTO `international` (`id`, `heading`, `location`, `price`, `duration`, `details`, `image1`, `image2`, `overview`, `iti`, `info`, `terms`) VALUES
+(7, 'The Oberoi Amarvilas Agra', 'Agra | India', '19,333', '', '<h4>Top Facilites</h4>\r\n<ul>\r\n<li>Breakfast</li>\r\n<li>Air Conditioning</li>\r\n<li>Parking</li>\r\n<li>Free WiFi</li>\r\n<li>Restaurant</li>\r\n<li>Fitness Centre</li>\r\n</ul>\r\n\r\n', 'ob.jpg', '2_award-winning_hotel.jpg', '<p>Just 600 metres from the Taj Mahal, The Oberoi Amarvilas Agra boasts luxurious 5-star accommodation with a flat-screen TV. This property houses 4 dining options and provides free parking. Free WiFi is available in the rooms of the property.</p> ', '', '', ''),
+(14, 'Trident Agra', 'Agra (India)', '3000', '', '<h4>Top Facilites</h4>\r\n<ul>\r\n<li>Breakfast</li>\r\n<li>Air Conditioning</li>\r\n<li>Parking</li>\r\n<li>Free WiFi</li>\r\n<li>Restaurant</li>\r\n<li>Fitness Centre</li>\r\n</ul>\r\n\r\n', 'Trident Agra.jpg', 'Trident Agra12.jpg', '<p>Located 1.5 km from Taj Mahal, Trident Agra features an outdoor pool and 24-hour front desk. A business centre, restaurant and bar are available. Some rooms offer garden or pool views. Free WiFi is available in the rooms of the property.</p>', ' ', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testi`
+--
+
+CREATE TABLE `testi` (
+  `id` int(11) NOT NULL,
+  `heading` varchar(255) NOT NULL,
+  `image` varchar(33) NOT NULL,
+  `decr` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testi`
+--
+
+INSERT INTO `testi` (`id`, `heading`, `image`, `decr`) VALUES
+(4, 'Ashish Ranjan', '', 'It is best way travel. I suggest you friend no think about this go and book your trip on this'),
+(5, 'Ranjan kumar', '20190211_134344.jpg', 'Best car experience in low cost'),
+(6, 'Neha rani', '', 'This is the best travel service in Patna');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `domestic`
+--
+ALTER TABLE `domestic`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `international`
+--
+ALTER TABLE `international`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `testi`
+--
+ALTER TABLE `testi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `domestic`
+--
+ALTER TABLE `domestic`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+
+--
+-- AUTO_INCREMENT for table `international`
+--
+ALTER TABLE `international`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `testi`
+--
+ALTER TABLE `testi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
